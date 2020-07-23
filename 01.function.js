@@ -41,3 +41,19 @@ resultat3 = multiplication(nombre1,nombre2);
 
 // Affichage 
 console.log("resultat3 = " , resultat3);
+
+// ################################## Fonction comme élément du 1er ordre ####################################
+
+// Création methode afficherOperation qui renvoi un string sous la forme <nomOperation>(<nb1>, <nb2>) = <resultat invocation operation>
+function afficherOperation(nomOperation,operation, nb1, nb2) {
+    return nomOperation +"("+ nb1 + "," + nb2 + ") = " + operation(nb1,nb2);
+}
+
+// Affichage pour une somme
+console.log(afficherOperation("Somme", somme, 20, 40));
+
+// Affichage pour une multiplication
+console.log(afficherOperation("Multiplication", multiplication, 10, 20));
+
+// Affichage pour une soustraction
+console.log(afficherOperation("Soustraction", (nb1,nb2) => { return nb1 - nb2}, 15 , 5));
