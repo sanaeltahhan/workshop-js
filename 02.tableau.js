@@ -9,7 +9,7 @@ villes.forEach(ville => console.log(ville));
 // ################################################# every() ##################################
 // A l’aide de la fonction every(), déterminer si toutes les villes de la variables villes contiennent la lettre a.
 
-const containsA = (currentValue) => currentValue.indexOf('a') > -1;
+const containsA = (currentValue) => currentValue.includes('a');
 
 console.log("lettreADansToutesLesVilles = " + villes.every(containsA));
 
@@ -38,7 +38,7 @@ console.log( "villesSansTiretSansEspace = " + villesSansTiretSansEspace);
 //################################################### Chainer les Fonctions #########################################
 
 
-var villesMajusculeSeTerminantParS = "villesMajusculeSeTerminantParS = " + villes.map(ville => ville.toUpperCase()).filter(ville => ville.endsWith('S'));
+var villesMajusculeSeTerminantParS = "villesMajusculeSeTerminantParS = " + villes.filter(ville => ville.endsWith('s')).map(ville => ville.toUpperCase());
 
 console.log(villesMajusculeSeTerminantParS);
 
